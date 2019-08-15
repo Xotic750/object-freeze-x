@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`freeze 0 should throw when typed array has elements 1`] = `"Cannot freeze array buffer views with elements"`;
+
+exports[`freeze 1 should throw when typed array has elements 1`] = `"Cannot freeze array buffer views with elements"`;
