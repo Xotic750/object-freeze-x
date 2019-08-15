@@ -1,4 +1,4 @@
-import isPimitive from 'is-primitive';
+import isPimitive from 'is-primitive-x';
 import isTypedArray from 'is-typed-array';
 
 const nativeFreeze = {}.constructor.freeze;

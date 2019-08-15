@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-15T17:15:52.342Z",
+  "date": "2019-08-15T18:31:24.170Z",
   "describe": "",
   "description": "Freezes an object. Or fake when freeze does not exist.",
   "file": "object-freeze-x.js",
-  "hash": "2754feb2281a72885e64",
+  "hash": "d38421933028d5c63f03",
   "license": "MIT",
   "version": "1.0.0"
 }
@@ -149,7 +149,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -157,31 +157,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/*!
- * is-primitive <https://github.com/jonschlinkert/is-primitive>
- *
- * Copyright (c) 2014-present, Jon Schlinkert.
- * Released under the MIT License.
- */
-
-
-
-module.exports = function isPrimitive(val) {
-  if (typeof val === 'object') {
-    return val === null;
-  }
-  return typeof val !== 'function';
-};
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(global) {
 
-var forEach = __webpack_require__(4);
+var forEach = __webpack_require__(2);
 
 var toStr = Object.prototype.toString;
 var hasToStringTag = typeof Symbol === 'function' && typeof Symbol.toStringTag === 'symbol';
@@ -240,58 +218,10 @@ module.exports = function isTypedArray(value) {
 	return tryTypedArrays(value);
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
 /***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "patchedFreeze", function() { return patchedFreeze; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "implementation", function() { return implementation; });
-/* harmony import */ var is_primitive__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
-/* harmony import */ var is_primitive__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(is_primitive__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var is_typed_array__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
-/* harmony import */ var is_typed_array__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(is_typed_array__WEBPACK_IMPORTED_MODULE_1__);
-
-
-var nativeFreeze = {}.constructor.freeze;
-
-var assertTypedArray = function assertTypedArray(obj) {
-  if (is_typed_array__WEBPACK_IMPORTED_MODULE_1___default()(obj) && obj.byteLength !== 0) {
-    throw new TypeError('Cannot freeze array buffer views with elements');
-  }
-
-  return obj;
-};
-
-var patchedFreeze = function freeze(obj) {
-  return is_primitive__WEBPACK_IMPORTED_MODULE_0___default()(obj) ? obj : nativeFreeze(assertTypedArray(obj));
-}; // fake
-
-var implementation = function freeze(obj) {
-  return assertTypedArray(obj);
-};
-/**
- * This method method freezes an object. A frozen object can no longer be changed; freezing an
- * object prevents new properties from being added to it, existing properties from being removed,
- * prevents changing the enumerability, configurability, or writability of existing properties,
- * and prevents the values of existing properties from being changed. In addition, freezing an
- * object also prevents its prototype from being changed. It returns the same object that
- * was passed in.
- *
- * @param {*} obj - The object to freeze.
- * @returns {*} The object that was passed to the function..
- */
-
-var freeze = typeof nativeFreeze === 'function' ? patchedFreeze : implementation;
-/* harmony default export */ __webpack_exports__["default"] = (freeze);
-
-
-
-/***/ }),
-/* 3 */
+/* 1 */
 /***/ (function(module, exports) {
 
 var g;
@@ -317,7 +247,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 4 */
+/* 2 */
 /***/ (function(module, exports) {
 
 
@@ -341,6 +271,72 @@ module.exports = function forEach (obj, fn, ctx) {
         }
     }
 };
+
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/is-primitive-x/dist/is-primitive-x.esm.js
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/**
+ * Returns true if the value is a primitive.
+ *
+ * @param {*} [val] - The value to test.
+ * @returns {boolean} True if a primitive, otherwise false..
+ */
+var isPrimitive = function isPrimitive(val) {
+  return _typeof(val) === 'object' ? val === null : typeof val !== 'function';
+};
+
+/* harmony default export */ var is_primitive_x_esm = (isPrimitive);
+
+
+// EXTERNAL MODULE: ./node_modules/is-typed-array/index.js
+var is_typed_array = __webpack_require__(0);
+var is_typed_array_default = /*#__PURE__*/__webpack_require__.n(is_typed_array);
+
+// CONCATENATED MODULE: ./dist/object-freeze-x.esm.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "patchedFreeze", function() { return patchedFreeze; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "implementation", function() { return implementation; });
+
+
+var nativeFreeze = {}.constructor.freeze;
+
+var object_freeze_x_esm_assertTypedArray = function assertTypedArray(obj) {
+  if (is_typed_array_default()(obj) && obj.byteLength !== 0) {
+    throw new TypeError('Cannot freeze array buffer views with elements');
+  }
+
+  return obj;
+};
+
+var patchedFreeze = function freeze(obj) {
+  return is_primitive_x_esm(obj) ? obj : nativeFreeze(object_freeze_x_esm_assertTypedArray(obj));
+}; // fake
+
+var implementation = function freeze(obj) {
+  return object_freeze_x_esm_assertTypedArray(obj);
+};
+/**
+ * This method method freezes an object. A frozen object can no longer be changed; freezing an
+ * object prevents new properties from being added to it, existing properties from being removed,
+ * prevents changing the enumerability, configurability, or writability of existing properties,
+ * and prevents the values of existing properties from being changed. In addition, freezing an
+ * object also prevents its prototype from being changed. It returns the same object that
+ * was passed in.
+ *
+ * @param {*} obj - The object to freeze.
+ * @returns {*} The object that was passed to the function..
+ */
+
+var object_freeze_x_esm_freeze = typeof nativeFreeze === 'function' ? patchedFreeze : implementation;
+/* harmony default export */ var object_freeze_x_esm = __webpack_exports__["default"] = (object_freeze_x_esm_freeze);
 
 
 
