@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-17T12:16:15.929Z",
+  "date": "2019-08-17T21:29:26.822Z",
   "describe": "",
   "description": "Freezes an object. Or fake when freeze does not exist.",
   "file": "object-freeze-x.js",
