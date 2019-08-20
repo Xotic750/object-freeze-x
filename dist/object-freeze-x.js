@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-20T19:00:19.727Z",
+  "date": "2019-08-20T19:01:34.726Z",
   "describe": "",
   "description": "Freezes an object. Or fake when freeze does not exist.",
   "file": "object-freeze-x.js",
   "hash": "d38421933028d5c63f03",
   "license": "MIT",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {

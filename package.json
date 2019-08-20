@@ -1,6 +1,6 @@
 {
   "name": "object-freeze-x",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Freezes an object. Or fake when freeze does not exist.",
   "homepage": "https://github.com/Xotic750/object-freeze-x",
   "author": {
